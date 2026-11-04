@@ -1,17 +1,17 @@
 
 from pybricks.hubs import PrimeHub
-from pybricks.pupdevices import Motor
+from pybricks.pupdevices import Motor, ColorSensor
 from pybricks.parameters import Port, Direction
+from pybricks.robotics import DriveBase
 
 # Define the robot's motors and drive base
 
 hub = PrimeHub()
-left_motor = Motor(Port.A)
-right_motor = Motor(Port.B)
-left_hand_motor = Motor(Port.C, Direction.COUNTERCLOCKWISE)
-right_hand_motor = Motor(Port.D, Direction.COUNTERCLOCKWISE)
-drive_base = DriveBase(left_motor, right_motor, wheel_diameter=56, axle_track=114)
-color_sensor = ColorSensor(Port.S1)
-
-drive_base.settings(straight_speed=100, straight_acceleration=200, turn_rate=100, turn_acceleration=200)
-
+left_motor = Motor(Port.B, Direction.COUNTERCLOCKWISE)
+right_motor = Motor(Port.F, Direction.CLOCKWISE)
+left_hand_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE)
+right_hand_motor = Motor(Port.E, Direction.COUNTERCLOCKWISE)
+Robot = DriveBase(left_motor, right_motor, wheel_diameter=62.4, axle_track=142.5)
+color_sensor = ColorSensor(Port.C)
+Robot.use_gyro(True)
+Robot.settings(straight_speed=800, straight_acceleration=200, turn_rate=100, turn_acceleration=200)
