@@ -1,3 +1,15 @@
 from RobotSettings import *
 
+left_hand_motor.run_angle(-160, 160, wait=False)
+Robot.straight(750)
+Robot.turn(-45)
+right_hand_motor.run_angle(200, 400, wait=False)
+Robot.straight(150)
+left_hand_motor.run_angle(150, 160)
+Robot.straight(-75)
+Robot.turn(45)
+right_hand_motor.run_angle(-200, 500)
+Robot.straight(-100)
+right_hand_motor.run_angle(200, 500, wait=False)
 Robot.straight(200)
+right_hand_motor.run_angle(-400, 600)
