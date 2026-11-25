@@ -4,6 +4,7 @@ from pybricks.pupdevices import Motor, ColorSensor
 from pybricks.parameters import Port, Direction
 from pybricks.robotics import DriveBase
 from pybricks.parameters import Port, Direction, Stop
+from pybricks.tools import wait
 
 
 # Define the robot's motors and drive base

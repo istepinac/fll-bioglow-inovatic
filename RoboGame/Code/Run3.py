@@ -1,5 +1,7 @@
 from RobotSettings import *
 
+#Base: drone survey
+
 Robot.settings(straight_speed=200)
 Robot.straight(700)
 
